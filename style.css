@@ -120,6 +120,7 @@ h1 {
 #profile {
     padding: 30px 30px 10px 30px;
     border-bottom: 1px solid #ddd;
+    text-align: justify;
 }
 
 #profile-pic {
@@ -154,6 +155,7 @@ h1 {
 
 #profile p {
     margin-bottom: 20px;
+    
 }
 
 /**************************************************/
