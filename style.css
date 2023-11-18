@@ -105,6 +105,16 @@ h1 {
     padding-right: 30px;
 }
 
+#footer {
+    height: 58px;
+    font-size: 14px;
+    line-height: 58px;
+    padding-top: 4px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+    padding-right: 30px;
+}
+
 #header a {
     text-decoration: none;
     border-bottom: none;
