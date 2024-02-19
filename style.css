@@ -383,8 +383,8 @@ ul {
 
 .section.visitors {
     text-align: center; /* mid*/
-    border: 10px solid #CCCCCC; /* edge  */
+    border: 5px solid #CCCCCC; /* edge  */
     padding: 10px; /* edge */
     margin: 20 auto; /* mid area */
-    max-width: 900px; /* width */
+    max-width: 850px; /* width */
 }
