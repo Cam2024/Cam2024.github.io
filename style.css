@@ -268,10 +268,10 @@ ul {
 
 /**************************************************/
 
-.research {
-    /*padding: 30px;*/
-    /*padding-bottom: 30px;*/
-}
+/* .research {
+    padding: 30px;
+    padding-bottom: 30px;
+} */
 
 .research-proj {
     margin-left: 30px;
@@ -379,4 +379,12 @@ ul {
 .student-profile img {
     width: 100%;
     border-radius: 10px;
+}
+
+.section.visitors {
+    text-align: center; /* mid*/
+    border: 1px solid #CCCCCC; /* edge  */
+    padding: 10px; /* edge */
+    margin: 0 auto; /* mid area */
+    max-width: 600px; /* width */
 }
