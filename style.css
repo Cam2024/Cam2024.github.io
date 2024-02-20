@@ -382,10 +382,7 @@ ul {
 }
 
 .visitors {
-    text-align: center; /* mid*/
-    border: 5px solid #CCCCCC; /* edge  */
-    padding: 10px; /* edge */
-    margin: 20 auto; /* mid area */
-    max-width: 840px; /* width */
-    margin-left: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 20 auto;
 }
