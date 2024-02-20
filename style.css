@@ -381,7 +381,7 @@ ul {
     border-radius: 10px;
 }
 
-.section.visitors {
+.visitors {
     text-align: center; /* mid*/
     border: 5px solid #CCCCCC; /* edge  */
     padding: 10px; /* edge */
