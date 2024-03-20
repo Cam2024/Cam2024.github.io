@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <title>Final Year Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1000">
+        <link rel="stylesheet" href="https://use.typekit.net/quv7bsd.css"> <!-- fonts -->
+        <link rel="stylesheet" href="style.css" />
+
+        <script>
+             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+             ga('create', 'UA-89797207-1', 'auto');
+             ga('send', 'pageview');
+       </script>
+    </head>
+    <body id="body">
+        <div id="main"> 
+            <header id="header">
+                <a href="index.html">Back to home page</a>
+            </header>
+            <div id="profile">
+
+              <div id="profile-name">Analysis of Datasets</div>
+              <div id="profile-email">Jinsong Zhang</div>
+              <p>
+                Firstly, we can examine the structure of the dataset, which is as follows. It comprises the following fields: id, timeAtServer, aircraft, latitude, longitude, baroAltitude, geoAltitude, numMeasurements, and measurements. Here's a detailed explanation of each data field:<br><br>
+              
+                &bull;<b>id:</b> a unique ID for each transponder transmission. This ID can be used to refer to specific measurements in the results file.<br><br>
+                &bull;<b>timeAtServer:</b> timestamp denoting the time when the measurement arrived at OpenSky’s server. Unit is seconds and it starts at timeAtServer=0 in each data set. <br><br>
+                &bull;<b>aircraft:</b> a randomized ID of the aircraft which sent the position report.<br><br>
+                &bull;<b>latitude:</b> latitude reported by the aircraft in decimal degrees. This column is null for those positions which should be determined by the localization algorithm.<br><br>
+                &bull;<b>longitude:</b> longitude reported by the aircraft in decimal degrees. This column is null for those positions which should be determined by the localization algorithm.<br><br>
+                &bull;<b>baroAltitude:</b> barometric altitude reported by the aircraft in meters.<br><br>
+                &bull;<b>geoAltitude:</b> geometric (GPS) height reported by the aircraft in meters. This column is null for those positions which should be determined by the localization algorithm.<br><br>
+                &bull;<b>numMeasurements:</b> redundant field indicating the number of sensors which recorded the position report.<br><br>
+                &bull;<b>measurements:</b> JSON array of triples [sensorID, timestamp, signalstrength].<br><br>
+                &bull;<b>serial:</b> unique sensor ID which can be matched with the sensor information table (sensors data table below).<br><br>
+                &bull;<b>timestamp:</b> precise timestamp for the detection of the position report at the sensor in nanoseconds.<br><br>
+                &bull;<b>signalstrength:</b> indicator of the strength of the report’s signal at the sensor (often in dB).<br><br>
+                <br>
+              </p>
+              <img src="img/data_analysis/data_excel.png">
+              <p>
+                We noticed some missing data points, but these missing data points can be found in another file named "results" where corresponding missing data is documented. Additionally, we observed that there is a lot of unnecessary data here. For training the model, we only require timestamps, latitude, longitude, and altitude. However, we also discovered that this dataset contains data for more than one aircraft. Therefore, we need to first complete the missing data points in this dataset before proceeding with the analysis.
+              </p>
+              <p>
+                We observed in the dataset that each ID corresponds to an ID in another dataset named "results." Therefore, we will start by completing these missing entries.
+              </p>
+              <div id=".imgs">
+                <img src="img/data_analysis/result.png">     
+              </div>
+              <p>
+                After completing the dataset, we can now analyze the trajectory of a particular aircraft. Below is the trajectory of aircraft 106, where it is evident that this aircraft is flying from London to Belfast.
+              </p>
+              <div id=".imgs">
+                <img src="img/data_analysis/flight.png">     
+              </div>
+              <p>
+                Great! With this, we have a good understanding of the general structure of the dataset. We can now proceed to prepare for the next section, which involves <a href="log_2.html">dataset preprocessing</a> and dataset creation.
+              </p>
+
+
+
+            </div>
+
+    
+            <div class="divider"></div>
+
+            <header id="footer">
+                <a href="log_2.html">Next Page</a>
+            </header>
+            </div>
+        </div>
+
+        <script>
+            function toggleNews() {
+              var moreNews = document.getElementById("moreNews");
+              var moreNewsBtn = document.getElementById("moreNewsBtn");
+              var lessNewsBtn = document.getElementById("lessNewsBtn");
+              if (moreNewsBtn.style.display === "none") {
+                moreNews.style.display = "none";
+                moreNewsBtn.style.display = "inline";
+                lessNewsBtn.style.display = "none";
+              } else {
+                moreNews.style.display = "inline";
+                moreNewsBtn.style.display = "none";
+                lessNewsBtn.style.display = "inline";
+              }
+            }
+            function togglePubs() {
+              var morePubs = document.getElementById("morePubs");
+              var morePubsBtn = document.getElementById("morePubsBtn");
+              var lessPubsBtn = document.getElementById("lessPubsBtn");
+              if (morePubsBtn.style.display === "none") {
+                morePubs.style.display = "none";
+                morePubsBtn.style.display = "inline";
+                lessPubsBtn.style.display = "none";
+              } else {
+                morePubs.style.display = "inline";
+                morePubsBtn.style.display = "none";
+                lessPubsBtn.style.display = "inline";
+              }
+            }
+        </script>
+    </body>
+</html>

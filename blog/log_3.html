@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <title>Final Year Project</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1000">
+        <link rel="stylesheet" href="https://use.typekit.net/quv7bsd.css"> <!-- fonts -->
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            .formula {
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
+        </style>
+        <style>
+            pre {
+                background-color: #f4f4f4;
+                padding: 10px;
+                border-radius: 5px;
+                overflow-x: auto;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+        <script>
+             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+             ga('create', 'UA-89797207-1', 'auto');
+             ga('send', 'pageview');
+       </script>
+    </head>
+    <body id="body">
+        <div id="main"> 
+            <header id="header">
+                <a href="index.html">Back to home page</a>
+            </header>
+            <div id="profile">
+
+              <div id="profile-name">Model Construction</div>
+              <div id="profile-email">Jinsong Zhang</div>
+              <img src="img/model/rnn.svg">
+              <p>
+                Now we can proceed to construct the models. Due to the issues of vanishing or exploding gradients and long-term dependencies in basic RNNs, we will use LSTM and GRU models here.<br><br>
+              </p>
+              <img src="img/model/lstm-3.svg">
+              <p>
+                For LSTM, we can find a <a href="https://d2l.ai/chapter_recurrent-modern/lstm.html">detailed tutorial</a> on the PyTorch version of the implementation here. First, we can understand how LSTM works by using the above figure.
+              </p>
+
+              <p>
+                Forget Gate: The forget gate determines how much information to discard from the cell state. It's a Sigmoid layer that outputs values between 0 and 1, where 0 means forget completely and 1 means remember completely. The calculation formula for the forget gate is as follows:
+              </p>
+              <div class="formula">
+                <strong>Forget Gate:</strong>
+                \( f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \)
+                </div>
+                <p>
+                    Input Gate: The input gate determines which information to update in the cell state. It consists of two parts: a Sigmoid layer to decide which information to update and a tanh layer to create a new candidate value vector to be added to the cell state. The calculation formulas for the input gate are as follows:
+                </p>
+                <div class="formula">
+                    <strong>Input Gate:</strong>
+                    \( i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \)
+                </div>
+                <div class="formula">
+                    <strong>Candidate Value:</strong>
+                    \( \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \)
+                </div>
+                <p>Update Cell State: The updated cell state is determined by both the forget gate and the input gate. First, the forget gate decides how much old information to discard from the cell state, then the input gate decides how much new information to add to the cell state. The calculation formula for the updated cell state is as follows:</p>
+                <div class="formula">
+                    <strong>Update Cell State:</strong>
+                    \( C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C}_t \)
+                </div>
+                <p>Output Gate: The output gate determines the final output. It's a Sigmoid layer that outputs values to decide which information from the cell state will be output. The calculation formula for the output gate is as follows:</p>
+                <div class="formula">
+                    <strong>Output Gate:</strong>
+                    \( o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \)
+                </div>
+                <p>Update Hidden State: Finally, we use the output gate to determine the hidden state. The hidden state is a filtered version of the cell state that contains information for the current time step. The calculation formula for the hidden state is as follows:</p>
+                <div class="formula">
+                    <strong>Update Hidden State:</strong>
+                    \( h_t = o_t \cdot \tanh(C_t) \)
+                </div>
+                <p>
+                    In the above formulas, \(x_t\) is the input at the current time step, \(h_{t-1}\) is the previous time step's hidden state, \(C_{t-1}\) is the previous time step's cell state, \(W\) and \(b\) are the model's weight and bias parameters, \(\sigma\) is the Sigmoid activation function, and \(\tanh\) is the hyperbolic tangent activation function.
+                </p>
+
+                <p>
+                    Here is the code for the PyTorch version of LSTM (requires an environment with PyTorch installed):
+                </p>
+
+                <pre>
+class LSTM(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, output_size):
+        super(LSTM, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).cuda()
+        c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).cuda()
+        out, _ = self.lstm(x.unsqueeze(-1), (h0, c0)) 
+        out = self.fc(out[:, -1, :])
+        return out
+                </pre>
+                <br>
+                <br>
+              <img src="img/model/gru-3.svg">
+              <p>
+                For GRU, we can find a <a href="https://d2l.ai/chapter_recurrent-modern/lstm.html">detailed tutorial</a> on the PyTorch version of the implementation here. First, we can understand how GRU works by using the above figure.
+              </p>
+
+              <p>
+                The Gated Recurrent Unit (GRU) is a recurrent neural network structure commonly used in sequence modeling, similar to the Long Short-Term Memory (LSTM) network, both aiming to solve the gradient vanishing and long term dependency problems in regular recurrent neural networks.GRU works on a simpler principle compared to the LSTM, but it is also able to effectively capture the sequence's long-term dependencies.
+              </p>
+              <p>
+                The core idea of GRU is the introduction of Update Gate and Reset Gate, through which the flow and forgetting of information is controlled. The following are the main parts of GRU and its formulas:
+              </p>
+
+              <ol>
+                <li><strong>Reset Gate:</strong> Determines whether to ignore previous states and how to combine the current input and previous states to generate a new candidate state. The reset gate's value, ranging between 0 and 1, is calculated using a sigmoid function:
+                    <div class="formula">
+                        \[r_t = \sigma(W_r \cdot [h_{t-1}, x_t] + b_r)\]
+                    </div>
+                </li>
+                <li><strong>Update Gate:</strong> Decides how much of the previous state information to retain at the current time step and combines the candidate state to generate the final hidden state. The update gate's value, also ranging between 0 and 1, is calculated using a sigmoid function:
+                    <div class="formula">
+                        \[z_t = \sigma(W_z \cdot [h_{t-1}, x_t] + b_z)\]
+                    </div>
+                </li>
+                <li><strong>Candidate Hidden State:</strong> Combines the reset gate and the current input to compute a candidate hidden state. This candidate state serves as an update to the previous hidden state and is calculated using the hyperbolic tangent (tanh) activation function:
+                    <div class="formula">
+                        \[\tilde{h}_t = \tanh(W_h \cdot [r_t \odot h_{t-1}, x_t] + b_h)\]
+                    </div>
+                </li>
+                <li><strong>Final Hidden State:</strong> Combines the previous hidden state and the candidate hidden state based on the update gate's value to produce the current hidden state:
+                    <div class="formula">
+                        \[h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t\]
+                    </div>
+                </li>
+            </ol>
+            <p>These equations describe the primary computational steps in GRU, where \(h_t\) is the current hidden state at time step \(t\), \(x_t\) is the input at time step \(t\), \(r_t\) is the value of the reset gate, \(z_t\) is the value of the update gate, \(\tilde{h}_t\) is the candidate hidden state, \(W_r\), \(W_z\), \(W_h\) are the weight matrices, \(b_r\), \(b_z\), \(b_h\) are the bias vectors, \(\sigma\) is the sigmoid function, and \(\tanh\) is the hyperbolic tangent function. GRU adjusts the flow and retention of information by controlling the gates, allowing better capture of long-term dependencies.</p>
+            <P>Here is the code for the PyTorch version of GRU (requires an environment with PyTorch installed):</P>
+            <pre>
+class GRU(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, output_size):
+        super(GRU, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        self.gru = nn.GRU(input_size, hidden_size, num_layers, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).cuda()
+        out, _ = self.gru(x.unsqueeze(-1), h0)
+        out = self.fc(out[:, -1, :])
+        return out
+            </pre>
+        
+            <br>
+            <p>At this point we have completed the construction of the model.</p>
+        </div>
+
+    
+            <div class="divider"></div>
+
+            <header id="footer">
+                <a href="log_4.html">Next Page</a>
+            </header>
+            </div>
+        </div>
+
+        <script>
+            function toggleNews() {
+              var moreNews = document.getElementById("moreNews");
+              var moreNewsBtn = document.getElementById("moreNewsBtn");
+              var lessNewsBtn = document.getElementById("lessNewsBtn");
+              if (moreNewsBtn.style.display === "none") {
+                moreNews.style.display = "none";
+                moreNewsBtn.style.display = "inline";
+                lessNewsBtn.style.display = "none";
+              } else {
+                moreNews.style.display = "inline";
+                moreNewsBtn.style.display = "none";
+                lessNewsBtn.style.display = "inline";
+              }
+            }
+            function togglePubs() {
+              var morePubs = document.getElementById("morePubs");
+              var morePubsBtn = document.getElementById("morePubsBtn");
+              var lessPubsBtn = document.getElementById("lessPubsBtn");
+              if (morePubsBtn.style.display === "none") {
+                morePubs.style.display = "none";
+                morePubsBtn.style.display = "inline";
+                lessPubsBtn.style.display = "none";
+              } else {
+                morePubs.style.display = "inline";
+                morePubsBtn.style.display = "none";
+                lessPubsBtn.style.display = "inline";
+              }
+            }
+        </script>
+    </body>
+</html>
