@@ -1,14 +1,14 @@
 /* CSS Reset: http://meyerweb.com/eric/tools/css/reset */
 
 :root {
-    --grey: rgb(90, 90, 90);
+    --grey: rgb(50, 50, 50);
     /* Columbia Blues: https://visualidentity.columbia.edu/content/colors-1 */
     --blue1: rgb(2,33,105);
     --blue2: rgb(0,51,160);
     --blue3: rgb(0,114,206);
     --blue4: rgb(108,172,228);
     --pink1: #F9564F;
- }
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -71,7 +71,7 @@ table {
 
 #body{
     font-family: roboto, sans-serif;
-    color: #a0a8b0;
+    color: rgb(50, 50, 50);
     /*color: #191e3f;*/
 }
 
@@ -109,7 +109,7 @@ h1 {
     line-height: 58px;
     padding-top: 42px;
     text-align: right;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(50, 50, 50);
     padding-right: 30px;
 }
 
@@ -119,14 +119,14 @@ h1 {
     line-height: 58px;
     padding-top: 4px;
     text-align: right;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(50, 50, 50);
     padding-right: 30px;
 }
 
 #header a {
     text-decoration: none;
     border-bottom: none;
-    color: #a0a8b0;
+    color: rgb(50, 50, 50);
 }
 
 #header a:hover {
@@ -137,7 +137,7 @@ h1 {
 
 #profile {
     padding: 30px 30px 10px 30px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(50, 50, 50);
     text-align: justify;
 }
 
@@ -173,7 +173,6 @@ h1 {
 
 #profile p {
     margin-bottom: 20px;
-    
 }
 
 /**************************************************/
@@ -192,7 +191,7 @@ h1 {
 }
 
 .slider a:hover {
-    border: none
+    border: none;
 }
 
 .slider img {
@@ -207,26 +206,26 @@ h1 {
 }
 
 .recent-work::-webkit-scrollbar-track {
-    background: #eee;
+    background: rgb(50, 50, 50);
     border-radius: 4px;
     margin-left: 240px;
     margin-right: 240px;
 }
 
 .recent-work::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: rgb(50, 50, 50);
     border-radius: 4px;
 }
 
 .recent-work::-webkit-scrollbar-thumb:hover {
-    background: #999;
+    background: rgb(70, 70, 70);
 }
 
 /**************************************************/
 
 .divider {
     width: 100%;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(50, 50, 50);
 }
 
 /**************************************************/
@@ -238,7 +237,7 @@ ul {
     list-style-type: disc;
     margin-left: 30px;
     margin-bottom: 30px;
-    color: #a0a8b0;
+    color: rgb(50, 50, 50);
 }
 
 .showBtn {
@@ -277,7 +276,6 @@ ul {
     margin-left: 30px;
     width: 100%;
     display: table;
-
 }
 
 .research-thumb {
