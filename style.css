@@ -1,7 +1,7 @@
 /* CSS Reset: http://meyerweb.com/eric/tools/css/reset */
 
 :root {
-    --grey: rgb(50, 50, 50);
+    --grey: rgb(58, 58, 58); /* 深灰色 */
     /* Columbia Blues: https://visualidentity.columbia.edu/content/colors-1 */
     --blue1: rgb(2,33,105);
     --blue2: rgb(0,51,160);
@@ -71,7 +71,7 @@ table {
 
 #body{
     font-family: roboto, sans-serif;
-    color: rgb(50, 50, 50);
+    color: #5a5a5a; /* 深灰色 */
     /*color: #191e3f;*/
 }
 
@@ -109,7 +109,7 @@ h1 {
     line-height: 58px;
     padding-top: 42px;
     text-align: right;
-    border-bottom: 1px solid rgb(50, 50, 50);
+    border-bottom: 1px solid #5a5a5a; /* 深灰色 */
     padding-right: 30px;
 }
 
@@ -119,14 +119,14 @@ h1 {
     line-height: 58px;
     padding-top: 4px;
     text-align: right;
-    border-bottom: 1px solid rgb(50, 50, 50);
+    border-bottom: 1px solid #5a5a5a; /* 深灰色 */
     padding-right: 30px;
 }
 
 #header a {
     text-decoration: none;
     border-bottom: none;
-    color: rgb(50, 50, 50);
+    color: #5a5a5a; /* 深灰色 */
 }
 
 #header a:hover {
@@ -137,7 +137,7 @@ h1 {
 
 #profile {
     padding: 30px 30px 10px 30px;
-    border-bottom: 1px solid rgb(50, 50, 50);
+    border-bottom: 1px solid #5a5a5a; /* 深灰色 */
     text-align: justify;
 }
 
@@ -173,6 +173,7 @@ h1 {
 
 #profile p {
     margin-bottom: 20px;
+    
 }
 
 /**************************************************/
@@ -191,7 +192,7 @@ h1 {
 }
 
 .slider a:hover {
-    border: none;
+    border: none
 }
 
 .slider img {
@@ -206,26 +207,26 @@ h1 {
 }
 
 .recent-work::-webkit-scrollbar-track {
-    background: rgb(50, 50, 50);
+    background: #5a5a5a; /* 深灰色 */
     border-radius: 4px;
     margin-left: 240px;
     margin-right: 240px;
 }
 
 .recent-work::-webkit-scrollbar-thumb {
-    background: rgb(50, 50, 50);
+    background: #5a5a5a; /* 深灰色 */
     border-radius: 4px;
 }
 
 .recent-work::-webkit-scrollbar-thumb:hover {
-    background: rgb(70, 70, 70);
+    background: #5a5a5a; /* 深灰色 */
 }
 
 /**************************************************/
 
 .divider {
     width: 100%;
-    border-bottom: 1px solid rgb(50, 50, 50);
+    border-bottom: 1px solid #5a5a5a; /* 深灰色 */
 }
 
 /**************************************************/
@@ -237,7 +238,7 @@ ul {
     list-style-type: disc;
     margin-left: 30px;
     margin-bottom: 30px;
-    color: rgb(50, 50, 50);
+    color: #5a5a5a; /* 深灰色 */
 }
 
 .showBtn {
@@ -276,6 +277,7 @@ ul {
     margin-left: 30px;
     width: 100%;
     display: table;
+
 }
 
 .research-thumb {
