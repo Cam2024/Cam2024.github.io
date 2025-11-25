@@ -71,7 +71,8 @@ table {
 
 #body{
     font-family: roboto, sans-serif;
-    color: #5a5a5a; /* 深灰色 */
+    color: #000000;
+    /* color: #5a5a5a;  */
     /*color: #191e3f;*/
 }
 
@@ -238,7 +239,8 @@ ul {
     list-style-type: disc;
     margin-left: 30px;
     margin-bottom: 30px;
-    color: #5a5a5a; /* 深灰色 */
+    /* color: #5a5a5a; */
+    color: #000000;
 }
 
 .showBtn {
