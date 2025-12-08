@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinsong Zhang</title>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/quv7bsd.css">
+    <link rel="stylesheet" href="style.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         ga('create', 'UA-89797207-1', 'auto');
+         ga('send', 'pageview');
+   </script>
+</head>
+
+<body>
+    <div id="main"> 
+        <nav id="navbar">
+            <div class="nav-links">
+                <a href="index.html" class="cv-link">Home</a>
+                <a href="#" class="cv-link" style="background: var(--link-color); color: #fff !important; cursor: default;">Reflections</a>
+                <a href="./assets/CV.pdf" target="_blank" class="cv-link">CV / Resume</a>
+            </div>
+        </nav>
+
+        <div class="section">
+            <h1 style="margin-bottom: 5px;">What I'm Doing Now</h1>
+            <p style="color: #666; font-style: italic; margin-bottom: 40px;">Last updated: Dec 2025</p>
+
+            <h2 id="working-on">🔬 Working On</h2>
+            <div class="status-card">
+                <p><strong>Research:</strong> I am currently exploring new ideas, with the primary focus likely to be on sparse matrix computation and training sparse models.</p>
+                <p><strong>Coding:</strong> Currently organizing the code from my previous paper.</p>
+                <p><strong>Life:</strong> Currently applying for a PhD program while enjoying my final days of master's studies in Santa Barbara.</p>
+            </div>
+        </div>
+
+        <!-- <div class="divider"></div> -->
+
+        <div class="section">
+            <h2 id="reading">📚 Recent Readings</h2>
+            
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div style="width:100%; height:140px; background: #003373; color:white; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            Paper
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <div class="book-title"><a href="https://distill.pub/2021/gnn-intro/">A Gentle Introduction to Graph Neural Networks</a></div>
+                        <div class="book-author">Google Research (Distill)</div>
+                        <!-- <div class="book-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div> -->
+                        <p class="book-comment">Currently reading.</p>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div style="width:100%; height:140px; background: #003373; color:white; display:flex; align-items:center; justify-content:center; border-radius:4px;">
+                            Paper
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <div class="book-title"><a href="https://nvlabs.github.io/VILA/">NVILA: Efficient Frontier Visual Language Models</a></div>
+                        <div class="book-author">Liu et al. (CVPR 2025)</div>
+                        <p class="book-comment">Currently reading.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 id="ideas">💡 Potential Ideas / Brainstorming</h2>
+            <p style="margin-bottom: 20px; font-style: italic; color: #666;">
+                Some raw thoughts, "what-ifs", and research directions I'm currently pondering but haven't started yet. Open to discussion!
+            </p>
+
+            <div class="ideas-grid">
+                <div class="idea-card">
+                    <div class="idea-header">
+                        <span class="idea-tag tag-hardware">Algorithm & Hardware</span>
+                        <span class="idea-status">status</span>
+                    </div>
+                    <h3 class="idea-title">Hardware Efficiency of Dynamic Sparse Training</h3>
+                    <p class="idea-desc">
+                        Existing GPUs (CUDA cores) are designed for dense matrix multiplication. While unstructured sparsity reduces computational load (FLOPs), it introduces discontinuous memory access patterns, often resulting in slower training speeds on standard GPUs rather than faster ones.
+                    </p>
+                </div>
+
+                <div class="idea-card">
+                    <div class="idea-header">
+                        <span class="idea-tag tag-software">AI/Systems & Hardware</span>
+                        <span class="idea-status">status</span>
+                    </div>
+                    <h3 class="idea-title">Is LLM the Future of Humanity? (Demo)</h3>
+                    <p class="idea-desc">
+                        I used to think LLMs were merely “clever” AI agents, incapable of performing many tasks well or at all. But the development of LLMs seems to be accelerating uncontrollably. Could we see the emergence of more brain-like models—ones that may not be as “clever” as current LLMs but can learn like humans? This likely requires simultaneous advancements in both software and hardware.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer id="footer">
+            <div style="float:left">
+                &copy; Jinsong Zhang
+            </div>
+            <div style="text-align: right;">
+                <a href="index.html">Back to Home</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -7,6 +7,8 @@
     
     <link rel="stylesheet" href="https://use.typekit.net/quv7bsd.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
 
     <script>
          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -22,11 +24,12 @@
     <div id="main"> 
         <nav id="navbar">
             <div class="nav-links">
-                <a href="#profile">Home</a>
-                <a href="#news">News</a>
+                <a href="#" class="cv-link" style="background: var(--link-color); color: #fff !important; cursor: default;">Home</a>
+                <!-- <a href="#news">News</a>
                 <a href="#education">Education</a>
                 <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
+                <a href="#projects">Projects</a> -->
+                <a href="now.html" class="cv-link">Reflections</a>
                 <a href="./assets/CV.pdf" target="_blank" class="cv-link">CV / Resume</a>
             </div>
         </nav>
@@ -35,6 +38,19 @@
             <div class="profile-container">
                 <div class="profile-pic">
                     <img src="images/people/jinsong.jpg" alt="Jinsong Zhang">
+                    <div class="social-links">
+                        <a href="https://github.com/Cam2024" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/jinsong-zhang-947659274/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        
+                        <a href="https://scholar.google.com/citations?hl=en-us&user=LMgPrPUAAAAJ" target="_blank" aria-label="Google Scholar">
+                            <i class="ai ai-google-scholar"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="profile-intro">
                     <h1 id="profile-name">Jinsong Zhang</h1>
@@ -42,12 +58,8 @@
                         Master Student @ UCSB<br>
                         Email: jinsongzhang[at]ucsb[dot]edu
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/Cam2024">GitHub</a> / 
-                        <a href="https://www.linkedin.com/in/jinsong-zhang-947659274/">LinkedIn</a> / 
-                        <a href="https://scholar.google.com/citations?hl=en-us&user=LMgPrPUAAAAJ">Google Scholar</a>
-                    </div>
-                    
+
+
                     <p>
                         I am currently pursuing a M.S. degree in <strong>Computer Engineering</strong> at the <a href="https://www.ece.ucsb.edu/">University of California, Santa Barbara</a>. I previously earned my B.Eng. in Electronic Engineering from the <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
                     </p>
@@ -55,7 +67,7 @@
                         My current research, supervised by Prof. <a href="https://web.ece.ucsb.edu/~zhengzhang/Index.htm">Zheng Zhang</a>, focuses on <strong>low-precision tensorized DNN training and hardware acceleration</strong>. Previously, I worked in the WINDY Lab under Prof. <a href="https://shiyuzhao.westlake.edu.cn/Shiyu_Zhao.htm">Shiyu Zhao</a> on autonomous systems.
                     </p>
                     <p>
-                        Outside of academics, I am passionate about envisioning the future of computing architectures, from brain-inspired computing to potential bio-integrations. I also enjoy playing basketball and exploring new landscapes.
+                        Outside of academics, I am passionate about envisioning the future of computing architectures, from brain-inspired computing to potential bio-integrations. I also enjoy playing basketball and exploring new landscapes. For my recent work and reflections, you can find them here: <a href="now.html">Reflections</a>.
                     </p>
                 </div>
             </div>
@@ -72,28 +84,31 @@
             </ul>
         </div>
 
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
 
         <div id="education" class="section">
             <h2>Education</h2>
             <ul class="edu-list">
                 <li>
                     <div class="edu-header">
-                        <b>University of California, Santa Barbara (UCSB)</b>
+                        <!-- <b>University of California, Santa Barbara</b> -->
+                        <b><a href="https://www.ucsb.edu/" target="_blank">University of California, Santa Barbara</a></b>
                         <span class="edu-date">Sep 2024 - Present</span>
                     </div>
                     M.S. in Computer Engineering | <strong>GPA: 3.78/4.0</strong>
                 </li>
                 <li>
                     <div class="edu-header">
-                        <b>University of Liverpool</b>
+                        <!-- <b>University of Liverpool</b> -->
+                        <b><a href="https://www.liverpool.ac.uk/" target="_blank">University of Liverpool</a></b>
                         <span class="edu-date">Sep 2022 - Jun 2024</span>
                     </div>
                     B.Eng. in Electrical and Electronic Engineering | <strong>GPA: 3.7/4.0</strong>
                 </li>
                 <li>
                     <div class="edu-header">
-                        <b>Xi'an Jiaotong-Liverpool University</b>
+                        <!-- <b>Xi'an Jiaotong-Liverpool University</b> -->
+                        <b><a href="https://www.xjtlu.edu.cn/en" target="_blank">Xi'an Jiaotong-Liverpool University</a></b>
                         <span class="edu-date">Sep 2020 - Jun 2022</span>
                     </div>
                     B.Eng. in Electronic Science and Technology | <strong>GPA: 3.3/4.0</strong>
@@ -101,7 +116,7 @@
             </ul>
         </div>
 
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
 
         <div id="skills" class="section">
             <h2>Skills</h2>
@@ -111,8 +126,8 @@
                 <li><b>Hardware Design:</b> Vivado, Vitis, Quartus, Cadence.</li>
             </ul>
         </div>               
-        
-        <div class="divider"></div>
+
+        <!-- <div class="divider"></div> -->
 
         <div id="experience" class="section">
             <h2>Experience</h2>
@@ -122,7 +137,7 @@
             </ul>
         </div>
         
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
         
         <div id="research" class="section">
             <h2>Selected Research Projects</h2>
@@ -141,8 +156,8 @@
                         Proposed a novel hardware accelerator architecture for low-precision tensorized neural networks. We performed a comprehensive design space exploration on FPGA, achieving significant improvements in latency and energy efficiency compared to baseline implementations.
                     </p>
                     <div class="project-links">
-                        <a href="https://arxiv.org/abs/2511.17971">[arXiv]</a>
-                        <a href="#">[Code Coming Soon]</a>
+                        <a href="https://arxiv.org/abs/2511.17971">arXiv</a>
+                        <a href="#">Code Coming Soon</a>
                     </div>
                 </div>
             </div>
@@ -160,8 +175,8 @@
                         Deployed a YOLOv5s object detection model on an embedded platform using the NVIDIA Triton Inference Server. Integrated the perception pipeline with ROS for real-time autonomous navigation of small-scale vehicles.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/Object-detection-model-training-for-yolov5">[GitHub: Model]</a>
-                        <a href="https://github.com/Cam2024/yolo_triton_ws">[GitHub: ROS Implementation]</a>
+                        <a href="https://github.com/Cam2024/Object-detection-model-training-for-yolov5">GitHub: Model</a>
+                        <a href="https://github.com/Cam2024/yolo_triton_ws">GitHub: ROS Implementation</a>
                     </div>
                 </div>
             </div>
@@ -177,8 +192,8 @@
                         Developed and compared Recurrent Neural Network models (LSTM and GRU) to predict aircraft flight trajectories based on historical ADS-B data. Analyzed prediction accuracy and latency trade-offs.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/Recurrent-Neural-Network-LSTM-GRU-based-Aircraft-Trajectory-Prediction">[GitHub]</a>
-                        <a href="blog/index.html">[Blog]</a>
+                        <a href="https://github.com/Cam2024/Recurrent-Neural-Network-LSTM-GRU-based-Aircraft-Trajectory-Prediction">GitHub</a>
+                        <a href="blog/index.html">Blog</a>
                     </div>
                 </div>
             </div>
@@ -194,20 +209,20 @@
                         Implemented Tucker decomposition for fully connected layers to reduce model parameter size while maintaining accuracy.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/Tucker-Tensor-Layer-Fully-Connected-Neural-Networks">[GitHub]</a>
+                        <a href="https://github.com/Cam2024/Tucker-Tensor-Layer-Fully-Connected-Neural-Networks">GitHub</a>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
 
         <div id="projects" class="section">
             <h2>Selected Engineering Projects</h2>
-            <p style="margin-bottom: 20px; font-style: italic; color: #666;">
+            <!-- <p style="margin-bottom: 20px; font-style: italic; color: #666;">
                 A selection of course projects and hardware implementations.
-            </p>
+            </p> -->
 
             <div class="project-card">
                 <div class="project-img">
@@ -217,8 +232,8 @@
                     <a href="https://jszhang20.github.io/" class="project-title">ResNet Based Visual Perception and PID Control in Autonomous Vehicle</a>
                     <p class="project-desc">Combined deep learning based perception with classical PID control for lane keeping and navigation.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/ResNet-Based-Visual-Perception-and-PID-Control-in-Autonomous-Vehicle">[GitHub]</a>
-                        <a href="https://jszhang20.github.io/">[Blog]</a>
+                        <a href="https://github.com/Cam2024/ResNet-Based-Visual-Perception-and-PID-Control-in-Autonomous-Vehicle">GitHub</a>
+                        <a href="https://jszhang20.github.io/">Blog</a>
                     </div>
                 </div>
             </div>
@@ -231,7 +246,7 @@
                     <a href="https://github.com/Cam2024/Custom-32-bit-5-stage-Pipeline-RISC-V-Processor" class="project-title">Full Custom 32-bit 5-stage Pipeline RISC-V Processor</a>
                     <p class="project-desc">Designed a fully functional 5-stage pipeline processor supporting RV32I instruction set, handling hazards and forwarding.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/Custom-32-bit-5-stage-Pipeline-RISC-V-Processor">[GitHub]</a>
+                        <a href="https://github.com/Cam2024/Custom-32-bit-5-stage-Pipeline-RISC-V-Processor">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -246,7 +261,7 @@
                     <a href="https://github.com/Cam2024/Laser-Slope-Sensing-and-Mapping-Including-UAV-Attitude" class="project-title">Multi-sensor Slant Perception for UAVs</a>
                     <p class="project-desc">Integrated laser sensors and IMU data to estimate terrain slope for UAV landing maneuvers.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/Laser-Slope-Sensing-and-Mapping-Including-UAV-Attitude">[GitHub]</a>
+                        <a href="https://github.com/Cam2024/Laser-Slope-Sensing-and-Mapping-Including-UAV-Attitude">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -259,7 +274,7 @@
                     <a href="https://github.com/Cam2024/FPGA-Implementation-and-Extension-of-MIPS-Processor" class="project-title">FPGA Implementation of MIPS Processor</a>
                     <p class="project-desc">Implemented a MIPS processor on FPGA using Verilog, extending instruction support.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/FPGA-Implementation-and-Extension-of-MIPS-Processor">[GitHub]</a>
+                        <a href="https://github.com/Cam2024/FPGA-Implementation-and-Extension-of-MIPS-Processor">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -272,14 +287,14 @@
                     <a href="https://github.com/Cam2024/cnn-mnist-using-camera" class="project-title">Real-time Handwritten Digit Detection</a>
                     <p class="project-desc">Training CNN on MNIST dataset for real-time inference using camera input.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/cnn-mnist-using-camera">[GitHub]</a>
+                        <a href="https://github.com/Cam2024/cnn-mnist-using-camera">GitHub</a>
                     </div>
                 </div>
             </div> -->
             
             </div>
 
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
 
 
         <!-- <div class="divider"></div> -->
