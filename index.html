@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jinsong Zhang</title>
+    <title>Jinsong Zhang | Computer Engineering @ UCSB</title>
     
     <link rel="stylesheet" href="https://use.typekit.net/quv7bsd.css">
     <link rel="stylesheet" href="style.css" />
@@ -25,10 +25,10 @@
         <nav id="navbar">
             <div class="nav-links">
                 <a href="#" class="cv-link" style="background: var(--link-color); color: #fff !important; cursor: default;">Home</a>
-                <!-- <a href="#news">News</a>
+                <a href="#publications">Publications</a>
                 <a href="#education">Education</a>
                 <a href="#research">Research</a>
-                <a href="#projects">Projects</a> -->
+                <a href="#projects">Hardware Projects</a>
                 <a href="now.html" class="cv-link">Reflections</a>
                 <a href="./assets/CV.pdf" target="_blank" class="cv-link">CV / Resume</a>
             </div>
@@ -42,49 +42,62 @@
                         <a href="https://github.com/Cam2024" target="_blank" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        
                         <a href="https://www.linkedin.com/in/jinsong-zhang-947659274/" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        
                         <a href="https://scholar.google.com/citations?hl=en-us&user=LMgPrPUAAAAJ" target="_blank" aria-label="Google Scholar">
                             <i class="ai ai-google-scholar"></i>
+                        </a>
+                        <a href="mailto:jinsongzhang@ucsb.edu" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
                 <div class="profile-intro">
                     <h1 id="profile-name">Jinsong Zhang</h1>
                     <div id="profile-email">
-                        Master Student @ UCSB<br>
-                        Email: jinsongzhang[at]ucsb[dot]edu
+                        M.S. in Computer Engineering @ UC Santa Barbara<br>
+                        Email: jinsongzhang [at] ucsb [dot] edu
                     </div>
 
+                    <div style="margin: 12px 0; padding: 10px 14px; background: #eef5fc; border-left: 4px solid #1a73e8; border-radius: 4px; font-size: 0.95em;">
+                        <strong>📢 Looking for Opportunities:</strong> I am actively seeking <strong>Ph.D. positions for Spring/Fall 2027</strong> in Computer Architecture, AI Accelerators, and ML Systems.
+                    </div>
 
                     <p>
-                        I am currently pursuing a M.S. degree in <strong>Computer Engineering</strong> at the <a href="https://www.ece.ucsb.edu/">University of California, Santa Barbara</a>. I previously earned my B.Eng. in Electronic Engineering from the <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
+                        I am currently pursuing my M.S. degree in <strong>Computer Engineering</strong> at the <a href="https://www.ece.ucsb.edu/">University of California, Santa Barbara</a>. Previously, I earned my B.Eng. in Electrical and Electronic Engineering from the <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
                     </p>
                     <p>
-                        My current research, supervised by Prof. <a href="https://web.ece.ucsb.edu/~zhengzhang/Index.htm">Zheng Zhang</a>, focuses on <strong>low-precision tensorized DNN training and hardware acceleration</strong>. Previously, I worked in the WINDY Lab under Prof. <a href="https://shiyuzhao.westlake.edu.cn/Shiyu_Zhao.htm">Shiyu Zhao</a> on autonomous systems.
+                        My research is supervised by Prof. <a href="https://web.ece.ucsb.edu/~zhengzhang/Index.htm">Zheng Zhang</a>, focusing on <strong>low-precision tensorized neural network training, hardware-algorithm co-design, and domain-specific hardware accelerators</strong>. Previously, I worked as a visiting student in the WINDY Lab at Westlake University under Prof. <a href="https://shiyuzhao.westlake.edu.cn/Shiyu_Zhao.htm">Shiyu Zhao</a> on autonomous robotic systems and edge perception.
                     </p>
                     <p>
-                        Outside of academics, I am passionate about envisioning the future of computing architectures, from brain-inspired computing to potential bio-integrations. I also enjoy playing basketball and exploring new landscapes. For my recent work and reflections, you can find them here: <a href="now.html">Reflections</a>.
+                        Broadly, I am fascinated by exploring novel computer architectures to break through the memory and compute walls—ranging from spatial/systolic architectures to neuromorphic and brain-inspired computing systems.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="divider"></div> -->
 
-        <div id="news" class="section">
-            <h2>News</h2>
-            <ul class="news-list">
-                <li>
-                    <span class="date">[Nov 2025]</span> Our work has been submitted to 2026 63nd ACM/IEEE Design Automation Conference (DAC).
-                </li>
-            </ul>
+        <div id="publications" class="section">
+            <h2>Publications</h2>
+            <div class="project-card" style="border-left: 3px solid #1a73e8; padding-left: 15px; margin-bottom: 20px;">
+                <div class="project-content" style="width: 100%;">
+                    <a href="https://arxiv.org/abs/2511.17971" target="_blank" class="project-title" style="font-size: 1.15em;">
+                        Comprehensive Design Space Exploration for Tensorized Neural Network Hardware Accelerators
+                    </a>
+                    <p class="authors" style="margin: 5px 0;">
+                        <strong>Jinsong Zhang*</strong>, Minghe Li*, Jiayi Tian, Jinming Lu, <a href="https://web.ece.ucsb.edu/~zhengzhang/">Zheng Zhang</a>
+                    </p>
+                    <p class="project-desc">
+                        Proposed a unified Design Space Exploration (DSE) framework that jointly optimizes tensor contraction paths, hardware PE partitioning, and multi-level dataflow mappings for Tensorized Neural Networks. Deployed and evaluated on a Xilinx Virtex UltraScale+ (VU9P) FPGA, achieving 3.28x–4.00x inference and 3.42x–3.85x training latency speedups over dense baselines.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://arxiv.org/abs/2511.17971" target="_blank"><i class="fas fa-file-pdf"></i> arXiv</a>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- <div class="divider"></div> -->
 
         <div id="education" class="section">
             <h2>Education</h2>
@@ -93,7 +106,7 @@
                     <div class="edu-header">
                         <!-- <b>University of California, Santa Barbara</b> -->
                         <b><a href="https://www.ucsb.edu/" target="_blank">University of California, Santa Barbara</a></b>
-                        <span class="edu-date">Sep 2024 - Present</span>
+                        <span class="edu-date">Sep 2024 - Dec 2025</span>
                     </div>
                     M.S. in Computer Engineering | <strong>GPA: 3.78/4.0</strong>
                 </li>
@@ -116,153 +129,91 @@
             </ul>
         </div>
 
-        <!-- <div class="divider"></div> -->
-
         <div id="skills" class="section">
-            <h2>Skills</h2>
+            <h2>Technical Skills</h2>
             <ul>
-                <li><b>Frameworks & Tools:</b> PyTorch, OpenCV, ROS (Robot Operating System), Git, Linux.</li>
-                <li><b>Programming:</b> C/C++, Python, Verilog, MATLAB, Assembly.</li>
-                <li><b>Hardware Design:</b> Vivado, Vitis, Quartus, Cadence.</li>
-            </ul>
-        </div>               
-
-        <!-- <div class="divider"></div> -->
-
-        <div id="experience" class="section">
-            <h2>Experience</h2>
-            <ul>
-                <li><b>Teaching Assistant Certification</b>, University of California, Santa Barbara.</li>
-                <li><b>Visiting Student</b>, <a href="https://shiyuzhao.westlake.edu.cn/">WINDY Lab</a>, Westlake University (Advisor: Prof. Shiyu Zhao).</li>
-                <li><b>Summer Undergraduate Research Fellowship</b>, Xi'an Jiaotong-Liverpool University.</li>
+                <li><b>EDA & Toolchains:</b> Xilinx Vivado, Vitis HLS, Cadence Virtuoso, ModelSim, Quartus.</li>
+                <li><b>Software & Machine Learning:</b> C/C++ (Modern C++), SystemVerilog/Verilog, Python, PyTorch, ROS, Linux, Git, MATLAB.</li>
             </ul>
         </div>
-        
-        <!-- <div class="divider"></div> -->
-        
+
         <div id="research" class="section">
-            <h2>Selected Research Projects</h2>
+            <h2>Research Projects</h2>
 
             <div class="project-card">
                 <div class="project-img">
                     <img src="images/projects/dac.png" alt="Tensorized NN">
                 </div>
                 <div class="project-content">
-                    <a href="https://arxiv.org/abs/2511.17971" class="project-title">Comprehensive Design Space Exploration for Tensorized Neural Network Hardware Accelerators</a>
+                    <a href="https://arxiv.org/abs/2511.17971" class="project-title">Comprehensive DSE for Tensorized Neural Network Hardware Accelerators</a>
                     <p class="authors">
-                       Jinsong Zhang*, Minghe Li*, Jiayi Tian, Jinming Lu, <a href="https://web.ece.ucsb.edu/~zhengzhang/">Zheng Zhang</a>
+                       <strong>Jinsong Zhang*</strong>, Minghe Li*, Jiayi Tian, Jinming Lu, Zheng Zhang
                     </p>
-                    <p class="venue"><em>Submitted to 2026 Design Automation Conference (DAC)</em></p>
+                    <p class="venue"><em>Graduate Researcher @ UCSB (Jan 2025 – Nov 2025)</em></p>
                     <p class="project-desc">
-                        Proposed a novel hardware accelerator architecture for low-precision tensorized neural networks. We performed a comprehensive design space exploration on FPGA, achieving significant improvements in latency and energy efficiency compared to baseline implementations.
+                        Constructed a latency-driven analytical cost model with MAC-guided path pruning to search Pareto-optimal points. Implemented a streaming Tensor Train contraction kernel and reconfigurable systolic GEMM engine in Vitis HLS on Xilinx VU9P, demonstrating up to 4.00x latency speedup with 19.19 GOPS/W energy efficiency across ResNet and ViT.
                     </p>
                     <div class="project-links">
-                        <a href="https://arxiv.org/abs/2511.17971">arXiv</a>
-                        <a href="#">Code Coming Soon</a>
+                        <a href="https://arxiv.org/abs/2511.17971"><i class="fas fa-file-pdf"></i> arXiv</a>
+                        <a href="https://github.com/Cam2024"><i class="fab fa-github"></i> Code Coming Soon</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-img">
-                    <img src="images/projects/yolov5s.png" alt="YOLOv5">
+                    <img src="images/projects/SNN.png" alt="SNN Architecture">
                 </div>
                 <div class="project-content">
-                    <a href="https://github.com/Cam2024/Object-detection-model-training-for-yolov5" class="project-title">Visual Perception for Small Cars Based on YOLOv5s via ROS & Triton</a>
+                    <a href="https://github.com/Cam2024/Brain-Inspired-Scalable-Spiking-Neural-Networks-via-Reward-Broadcasting" class="project-title">Brain-Inspired Scalable Spiking Neural Networks via Reward Broadcasting</a>
+                    <p class="authors">Jinsong Zhang</p>
+                    <p class="venue"><em>Graduate Researcher @ UCSB (Jan 2025 – Mar 2025)</em></p>
+                    <p class="project-desc">
+                        Proposed an energy-efficient neuromorphic learning framework combining Reinforcement Learning with Brain-Inspired Reward Broadcasting (BIRB) to counter catastrophic forgetting. Formulated an SNN-Q learning pipeline with temporal-difference updates, achieving 96.88% accuracy on MNIST while cutting training convergence time by 66%.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Cam2024/Brain-Inspired-Scalable-Spiking-Neural-Networks-via-Reward-Broadcasting"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/projects/yolov5s.png" alt="YOLOv5 Swarm">
+                </div>
+                <div class="project-content">
+                    <a href="https://github.com/Cam2024/Object-detection-model-training-for-yolov5" class="project-title">Distributed Edge Vision & Swarm Perception System</a>
                     <p class="authors">
                        Jinsong Zhang, Jiachen Liang, Zhao Ma
                     </p>
+                    <p class="venue"><em>Visiting Research Assistant @ Westlake University (May 2023 – Sep 2023)</em></p>
                     <p class="project-desc">
-                        Deployed a YOLOv5s object detection model on an embedded platform using the NVIDIA Triton Inference Server. Integrated the perception pipeline with ROS for real-time autonomous navigation of small-scale vehicles.
+                        Architected an end-to-end distributed swarm vision framework integrating custom YOLOv5s and ROS. Deployed Triton Inference Server on edge robotic platforms, refactoring image preprocessing and ROS topic communications into C++ to slash edge inference latency and maximize control loop throughput.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/Object-detection-model-training-for-yolov5">GitHub: Model</a>
-                        <a href="https://github.com/Cam2024/yolo_triton_ws">GitHub: ROS Implementation</a>
+                        <a href="https://github.com/Cam2024/Object-detection-model-training-for-yolov5"><i class="fab fa-github"></i> Model Training</a>
+                        <a href="https://github.com/Cam2024/yolo_triton_ws"><i class="fab fa-github"></i> ROS C++ Workspace</a>
                     </div>
                 </div>
             </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="images/projects/fyp.png" alt="RNN">
-                </div>
-                <div class="project-content">
-                    <a href="blog/index.html" class="project-title">Aircraft Trajectory Prediction using LSTM & GRU</a>
-                    <p class="authors">Jinsong Zhang</p>
-                    <p class="project-desc">
-                        Developed and compared Recurrent Neural Network models (LSTM and GRU) to predict aircraft flight trajectories based on historical ADS-B data. Analyzed prediction accuracy and latency trade-offs.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Cam2024/Recurrent-Neural-Network-LSTM-GRU-based-Aircraft-Trajectory-Prediction">GitHub</a>
-                        <a href="blog/index.html">Blog</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="images/projects/TTL.png" alt="Tucker Tensor">
-                </div>
-                <div class="project-content">
-                    <a href="https://github.com/Cam2024/Tucker-Tensor-Layer-Fully-Connected-Neural-Networks" class="project-title">Tucker Tensor Layer in Fully Connected Neural Networks</a>
-                    <p class="authors">Jinsong Zhang</p>
-                    <p class="project-desc">
-                        Implemented Tucker decomposition for fully connected layers to reduce model parameter size while maintaining accuracy.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/Cam2024/Tucker-Tensor-Layer-Fully-Connected-Neural-Networks">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <!-- <div class="divider"></div> -->
-
         <div id="projects" class="section">
-            <h2>Selected Engineering Projects</h2>
-            <!-- <p style="margin-bottom: 20px; font-style: italic; color: #666;">
-                A selection of course projects and hardware implementations.
-            </p> -->
-
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="images/projects/poster.jpg" alt="ResNet Control">
-                </div>
-                <div class="project-content">
-                    <a href="https://jszhang20.github.io/" class="project-title">ResNet Based Visual Perception and PID Control in Autonomous Vehicle</a>
-                    <p class="project-desc">Combined deep learning based perception with classical PID control for lane keeping and navigation.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Cam2024/ResNet-Based-Visual-Perception-and-PID-Control-in-Autonomous-Vehicle">GitHub</a>
-                        <a href="https://jszhang20.github.io/">Blog</a>
-                    </div>
-                </div>
-            </div>
+            <h2>Selected Projects</h2>
 
             <div class="project-card">
                 <div class="project-img">
                     <img src="images/projects/RISCV.png" alt="RISC-V">
                 </div>
                 <div class="project-content">
-                    <a href="https://github.com/Cam2024/Custom-32-bit-5-stage-Pipeline-RISC-V-Processor" class="project-title">Full Custom 32-bit 5-stage Pipeline RISC-V Processor</a>
-                    <p class="project-desc">Designed a fully functional 5-stage pipeline processor supporting RV32I instruction set, handling hazards and forwarding.</p>
+                    <a href="https://github.com/Cam2024/Custom-32-bit-5-stage-Pipeline-RISC-V-Processor" class="project-title">Full-Custom 32-bit 5-Stage Pipelined RISC-V Processor (RTL to Transistor)</a>
+                    <p class="authors">Jinsong Zhang</p>
+                    <p class="venue"><em>UC Santa Barbara (Sep 2024 – Dec 2024)</em></p>
+                    <p class="project-desc">
+                        Architected an RV32I 5-stage pipelined core in Verilog featuring dynamic hazard detection, stall management, and forwarding paths. Designed the entire transistor-level datapath in Cadence Virtuoso using NCSU FreePDK 45nm, achieving timing closure at 50 MHz and verifying cycle-exact behavioral equivalence with RTL via SPICE simulations.
+                    </p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/Custom-32-bit-5-stage-Pipeline-RISC-V-Processor">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-img">
-                     <video width="150" height="100" autoplay loop muted playsinline style="border-radius: 5px;">
-                        <source src="images/projects/module_exp.mp4" type="video/mp4">
-                      </video>
-                </div>
-                <div class="project-content">
-                    <a href="https://github.com/Cam2024/Laser-Slope-Sensing-and-Mapping-Including-UAV-Attitude" class="project-title">Multi-sensor Slant Perception for UAVs</a>
-                    <p class="project-desc">Integrated laser sensors and IMU data to estimate terrain slope for UAV landing maneuvers.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Cam2024/Laser-Slope-Sensing-and-Mapping-Including-UAV-Attitude">GitHub</a>
+                        <a href="https://github.com/Cam2024/Custom-32-bit-5-stage-Pipeline-RISC-V-Processor"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
@@ -272,43 +223,41 @@
                     <img src="images/projects/MIPS.png" alt="MIPS">
                 </div>
                 <div class="project-content">
-                    <a href="https://github.com/Cam2024/FPGA-Implementation-and-Extension-of-MIPS-Processor" class="project-title">FPGA Implementation of MIPS Processor</a>
-                    <p class="project-desc">Implemented a MIPS processor on FPGA using Verilog, extending instruction support.</p>
+                    <a href="https://github.com/Cam2024/FPGA-Implementation-and-Extension-of-MIPS-Processor" class="project-title">FPGA Implementation & Extension of MIPS Processor</a>
+                    <p class="authors">Jinsong Zhang</p>
+                    <p class="venue"><em>University of Liverpool (Jan 2024 – Mar 2024)</em></p>
+                    <p class="project-desc">Implemented a multicycle MIPS microprocessor on FPGA with custom instruction extensions in Verilog, optimizing datapath execution cycles.</p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/FPGA-Implementation-and-Extension-of-MIPS-Processor">GitHub</a>
+                        <a href="https://github.com/Cam2024/FPGA-Implementation-and-Extension-of-MIPS-Processor"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
+        
 
-            <!-- <div class="project-card">
+            <div class="project-card">
                 <div class="project-img">
-                    <img src="images/projects/CNN_mnist.png" alt="CNN">
+                     <video width="150" height="100" autoplay loop muted playsinline style="border-radius: 5px;">
+                        <source src="images/projects/module_exp.mp4" type="video/mp4">
+                      </video>
                 </div>
                 <div class="project-content">
-                    <a href="https://github.com/Cam2024/cnn-mnist-using-camera" class="project-title">Real-time Handwritten Digit Detection</a>
-                    <p class="project-desc">Training CNN on MNIST dataset for real-time inference using camera input.</p>
+                    <a href="https://github.com/Cam2024/Laser-Slope-Sensing-and-Mapping-Including-UAV-Attitude" class="project-title">Real-Time Multi-Sensor Slope Perception Payload for UAVs</a>
+                    <p class="authors">Jinsong Zhang</p>
+                    <p class="venue"><em>Westlake University (May 2023 – Jul 2023)</em></p>
+                    <p class="project-desc">
+                        Engineered an airborne terrain-monitoring payload combining multi-beam laser rangefinders and an IMU with microcontroller telemetry. Implemented moving-average filtering to suppress motor vibration noise, providing robust slope angle feedback for autonomous terrain-adaptive landing.
+                    </p>
                     <div class="project-links">
-                        <a href="https://github.com/Cam2024/cnn-mnist-using-camera">GitHub</a>
+                        <a href="https://github.com/Cam2024/Laser-Slope-Sensing-and-Mapping-Including-UAV-Attitude"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-            </div> -->
+            </div>   
             
-            </div>
-
-        <!-- <div class="divider"></div> -->
-
-
-        <!-- <div class="divider"></div> -->
-            <div class="visitors", style="text-align: center;">
-            <a href="https://info.flagcounter.com/KdGa"><img src="https://s11.flagcounter.com/map/KdGa/size_s/txt_000000/border_CCCCCC/pageviews_1/viewers_0/flags_0/" alt="Flag Counter" border="0"></a>
-            </div>
-    
-        <!-- <div class="divider"></div> -->
-
+        </div>
 
         <footer id="footer">
             <div style="float:left">
-                &copy; Jinsong Zhang
+                &copy; Jinsong Zhang | UC Santa Barbara
             </div>
             <div style="text-align: right;">
                 <a href="https://github.com/Cam2024">GitHub</a> &nbsp;&bull;&nbsp;
